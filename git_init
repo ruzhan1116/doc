@@ -1,0 +1,9 @@
+
+ssh-keygen -t rsa -C "huangrz@qq.com"
+
+git config --global user.name "huangrz"
+git config --global user.email "huangrz@qq.com"
+
+
+ls ~/.ssh/*.pub
+cat ~/.ssh/id_rsa.pub

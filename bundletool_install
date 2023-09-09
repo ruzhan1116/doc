@@ -1,0 +1,5 @@
+java -jar bundletool.jar build-apks --bundle=xxx-release.aab --output=xxx-release.apks --ks=xxx.keystore --ks-pass=pass:xxx --ks-key-alias=release --key-pass=pass:xxx 
+
+
+
+java -jar bundletool.jar install-apks --apks=xxx-release.apks

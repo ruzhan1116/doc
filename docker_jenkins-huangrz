@@ -1,0 +1,19 @@
+docker run --name jenkins-huangrz --restart=on-failure --detach \
+  --network jenkins --env DOCKER_HOST=tcp://docker:2376 \
+  --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 \
+  --env TZ=Asia/Shanghai \
+  --env JAVA_HOME=/var/jdk_home \
+  --env GRADLE_HOME=/var/gradle_home \
+  --env ANDROID_HOME=/var/android_home \
+  --env FLUTTER_HOME=/var/flutter_home \
+  --env DART_HOME=/var/dart_home \
+  --publish 8080:8080 --publish 50000:50000 \
+  --volume /Users/ruzhanhuang/Documents/docker/jdk/Contents/Home:/var/jdk_home \
+  --volume /Users/ruzhanhuang/Documents/docker/gradle:/var/gradle_home \
+  --volume /Users/ruzhanhuang/Library/Android/sdk:/var/android_home \
+  --volume /Users/ruzhanhuang/fvm/versions/3.10.6:/var/flutter_home \
+  --volume /Users/ruzhanhuang/fvm/versions/3.10.6/bin/cache/dart-sdk:/var/dart_home \
+  --volume /Users/ruzhanhuang/Documents/docker/jenkins-data:/var/jenkins_home \
+  --volume /Users/ruzhanhuang/Documents/docker/jenkins-docker-certs:/certs/client:ro \
+  --volume "$HOME":/home \
+jenkins/jenkins

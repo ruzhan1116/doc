@@ -1,0 +1,6 @@
+mount -o rw,remount /system
+
+cp /sdcard/ec959274.0  /system/etc/security/cacerts
+chmod 644 /system/etc/security/cacerts/ec959274.0
+
+mount -o ro,remount /system

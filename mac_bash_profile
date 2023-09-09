@@ -1,0 +1,10 @@
+open -e ~/.bash_profile
+source ~/.bash_profile
+
+open -e ~/.zshrc
+source ~/.zshrc
+
+export GRADLE_HOME=/Users/huangruzhan/Documents/gradle/gradle-6.1.1
+export PATH=$PATH:$GRADLE_HOME/bin
+
+
